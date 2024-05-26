@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58371F1D-CFB4-4388-B119-40053E88A414}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MI_AN_LIEN_LIN_Q</RootNamespace>
+    <AssemblyName>MI_AN_LIEN_LIN_Q</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=7.1.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.7.1.2\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.3.0.0\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DangKy.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DangKy.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Doi_Mat_Khau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Doi_Mat_Khau.Designer.cs">
+      <DependentUpon>frm_Doi_Mat_Khau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Chon_Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Chon_Game.Designer.cs">
+      <DependentUpon>frm_Chon_Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Chon_Vai_Tro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Chon_Vai_Tro.Designer.cs">
+      <DependentUpon>frm_Chon_Vai_Tro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Dang_Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Dang_Nhap.Designer.cs">
+      <DependentUpon>frm_Dang_Nhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Game_Dua_Xe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Game_Dua_Xe.Designer.cs">
+      <DependentUpon>frm_Game_Dua_Xe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Game_Pikachu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Game_Pikachu.Designer.cs">
+      <DependentUpon>frm_Game_Pikachu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Quan_Ly_Khach_Hang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Quan_Ly_Khach_Hang.Designer.cs">
+      <DependentUpon>frm_Quan_Ly_Khach_Hang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Nha_Cung_Cap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Nha_Cung_Cap.Designer.cs">
+      <DependentUpon>frm_Nha_Cung_Cap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Nha_San_Xuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Nha_San_Xuat.Designer.cs">
+      <DependentUpon>frm_Nha_San_Xuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Quan_Ly_Nhan_Vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Quan_Ly_Nhan_Vien.Designer.cs">
+      <DependentUpon>frm_Quan_Ly_Nhan_Vien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Quan_Ly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Quan_Ly.Designer.cs">
+      <DependentUpon>frm_Quan_Ly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Quan_Ly_Tai_Khoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Quan_Ly_Tai_Khoan.Designer.cs">
+      <DependentUpon>frm_Quan_Ly_Tai_Khoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Quen_Mat_Khau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Quen_Mat_Khau.Designer.cs">
+      <DependentUpon>frm_Quen_Mat_Khau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Quan_Ly_San_Pham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Quan_Ly_San_Pham.Designer.cs">
+      <DependentUpon>frm_Quan_Ly_San_Pham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Tao_Tai_Khoan_Khach_Hang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Tao_Tai_Khoan_Khach_Hang.Designer.cs">
+      <DependentUpon>frm_Tao_Tai_Khoan_Khach_Hang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Thong_Ke_Hoa_Don.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Thong_Ke_Hoa_Don.Designer.cs">
+      <DependentUpon>frm_Thong_Ke_Hoa_Don.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Thong_Ke_Phieu_Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Thong_Ke_Phieu_Nhap.Designer.cs">
+      <DependentUpon>frm_Thong_Ke_Phieu_Nhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Thong_Ke_Phieu_Xuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Thong_Ke_Phieu_Xuat.Designer.cs">
+      <DependentUpon>frm_Thong_Ke_Phieu_Xuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Xem_San_Pham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Xem_San_Pham.Designer.cs">
+      <DependentUpon>frm_Xem_San_Pham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_Chon_Game.resx">
+      <DependentUpon>frm_Chon_Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Doi_Mat_Khau.resx">
+      <DependentUpon>frm_Doi_Mat_Khau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Chon_Vai_Tro.resx">
+      <DependentUpon>frm_Chon_Vai_Tro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Dang_Nhap.resx">
+      <DependentUpon>frm_Dang_Nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Game_Dua_Xe.resx">
+      <DependentUpon>frm_Game_Dua_Xe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Game_Pikachu.resx">
+      <DependentUpon>frm_Game_Pikachu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Quan_Ly_Khach_Hang.resx">
+      <DependentUpon>frm_Quan_Ly_Khach_Hang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Nha_Cung_Cap.resx">
+      <DependentUpon>frm_Nha_Cung_Cap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Nha_San_Xuat.resx">
+      <DependentUpon>frm_Nha_San_Xuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Quan_Ly_Nhan_Vien.resx">
+      <DependentUpon>frm_Quan_Ly_Nhan_Vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Quan_Ly.resx">
+      <DependentUpon>frm_Quan_Ly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Quan_Ly_Tai_Khoan.resx">
+      <DependentUpon>frm_Quan_Ly_Tai_Khoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Quen_Mat_Khau.resx">
+      <DependentUpon>frm_Quen_Mat_Khau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Quan_Ly_San_Pham.resx">
+      <DependentUpon>frm_Quan_Ly_San_Pham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Tao_Tai_Khoan_Khach_Hang.resx">
+      <DependentUpon>frm_Tao_Tai_Khoan_Khach_Hang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Thong_Ke_Hoa_Don.resx">
+      <DependentUpon>frm_Thong_Ke_Hoa_Don.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Thong_Ke_Phieu_Nhap.resx">
+      <DependentUpon>frm_Thong_Ke_Phieu_Nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Thong_Ke_Phieu_Xuat.resx">
+      <DependentUpon>frm_Thong_Ke_Phieu_Xuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Xem_San_Pham.resx">
+      <DependentUpon>frm_Xem_San_Pham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.Config" />
+    <None Include="DangKy.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DangKy.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DangKy.dbml.layout">
+      <DependentUpon>DangKy.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{df9eb4f0-ff0e-4c59-9c05-7cb975eccc21}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{8084c812-d9a0-47d7-b1d3-6b7b8930eddc}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
